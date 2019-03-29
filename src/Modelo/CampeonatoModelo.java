@@ -6,6 +6,11 @@ import java.util.List;
 // Criação da Classe Modelo
 public class CampeonatoModelo {
 
+    //todo Criar nova classe Data de Jogos
+    //todo Criar atributo Lista de Jogos
+    //todo Criar método addDatas
+
+
     // Atributos = visibilidade tipo nomeDoAtributo;
     private String nomeCampeonato;
     private String pais;

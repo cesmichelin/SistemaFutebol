@@ -5,6 +5,7 @@ import Modelo.JogadoresModelo;
 import Modelo.TimesModelo;
 
 import java.sql.SQLOutput;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Principal {
@@ -12,6 +13,10 @@ public class Principal {
 
     // Método Principal
     public static void main(String[] args) {
+
+        Date date = new Date();
+        System.out.println(date);
+
 
         //Construtor Scanner (askUser = nome do Scanner)
         Scanner askUserCampeonato = new Scanner(System.in);
@@ -28,6 +33,7 @@ public class Principal {
         // Construtor objeto CampeonatoModelo (necessário incluir todos os atributos)
         CampeonatoModelo brasileiro = new CampeonatoModelo(nomeCampeonatoUser, paisCampeonatoUser, 2);
 
+        //TODO Quantidade de times dinâmica (User)
         //atribuindo variáveis
         brasileiro.setNomeCampeonato(nomeCampeonatoUser);
         brasileiro.setPais(paisCampeonatoUser);
@@ -112,6 +118,9 @@ public class Principal {
             System.out.println(brasileiro.getTimes().get(0).getNomeTime()
                     + " X "
                     + brasileiro.getTimes().get(1).getNomeTime());
+
+            //todo Deixar a posição dinâmica (fazendo conta i-1)
+
 
 
         }
