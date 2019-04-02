@@ -14,9 +14,6 @@ public class Principal {
     // Método Principal
     public static void main(String[] args) {
 
-        Date date = new Date();
-        System.out.println(date);
-
 
         //Construtor Scanner (askUser = nome do Scanner)
         Scanner askUserCampeonato = new Scanner(System.in);
@@ -27,17 +24,17 @@ public class Principal {
         System.out.println("De qual país é o Campeonato?");
         String paisCampeonatoUser = askUserCampeonato.next();
 
-        /*System.out.println("Quantos times disputam esse Campeonato?");
-        int quantidadeDeTimesUser = askUserCampeonato.nextInt();*/
+        System.out.println("Quantos times disputam esse Campeonato?");
+        int quantidadeDeTimesUser = askUserCampeonato.nextInt();
 
         // Construtor objeto CampeonatoModelo (necessário incluir todos os atributos)
-        CampeonatoModelo brasileiro = new CampeonatoModelo(nomeCampeonatoUser, paisCampeonatoUser, 2);
+        CampeonatoModelo brasileiro = new CampeonatoModelo(nomeCampeonatoUser, paisCampeonatoUser, quantidadeDeTimesUser);
 
-        //TODO Quantidade de times dinâmica (User)
+        //TODO Quantidade de times dinâmica (User) - DONE
         //atribuindo variáveis
         brasileiro.setNomeCampeonato(nomeCampeonatoUser);
         brasileiro.setPais(paisCampeonatoUser);
-        brasileiro.setQuantidadeTimes(2);
+        brasileiro.setQuantidadeTimes(quantidadeDeTimesUser);
 
         System.out.println(brasileiro.getNomeCampeonato() + " | " + brasileiro.getPais() + " | " + brasileiro.getQuantidadeTimes());
 
@@ -115,15 +112,16 @@ public class Principal {
 
 
         for (int i = 1; i < brasileiro.getTimes().size(); i++) {
-            System.out.println(brasileiro.getTimes().get(0).getNomeTime()
+            System.out.println(brasileiro.getTimes().get(i).getNomeTime()
                     + " X "
-                    + brasileiro.getTimes().get(1).getNomeTime());
+                    + brasileiro.getTimes().get(i-1).getNomeTime());
 
-            //todo Deixar a posição dinâmica (fazendo conta i-1)
+            //todo Deixar a posição dinâmica (fazendo conta i-1) - DONE
 
 
 
         }
+
     }
 
 }

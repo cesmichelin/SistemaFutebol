@@ -18,19 +18,27 @@ public class CampeonatoModelo {
 
     // Adiciona List<tipo> nomeDaLista = Inicializando Array
     private List<TimesModelo> times = new ArrayList<>();
+    private List<DatasDeJogos> jogosDatas = new ArrayList<>();
 
     // Método = visibilidade (com retorno, logo não é void) tipo parâmetro) { retorno }
-public CampeonatoModelo (String nomeCampeonato, String pais, int quantidadeTimes){
-    this.nomeCampeonato = nomeCampeonato;
-    this.pais = pais;
-    this.quantidadeTimes = quantidadeTimes;
+    public CampeonatoModelo(String nomeCampeonato, String pais, int quantidadeTimes) {
+        this.nomeCampeonato = nomeCampeonato;
+        this.pais = pais;
+        this.quantidadeTimes = quantidadeTimes;
 
-}
-// Método = adiciona timesCadastrados aos ArrayList times
-public void addTimes(TimesModelo timesCadastrados){
-    times.add(timesCadastrados);
+    }
 
-}
+    // Método = adiciona timesCadastrados aos ArrayList times
+    public void addTimes(TimesModelo timesCadastrados) {
+        times.add(timesCadastrados);
+
+    }
+
+    public void addDatas (DatasDeJogos datasDeJogos) {
+        jogosDatas.add(datasDeJogos);
+
+
+    }
 
     public String getNomeCampeonato() {
         return nomeCampeonato;
@@ -44,7 +52,13 @@ public void addTimes(TimesModelo timesCadastrados){
         return quantidadeTimes;
     }
 
-    public List<TimesModelo> getTimes() {return times;}
+    public List<TimesModelo> getTimes() {
+        return times;
+    }
+
+    public List<DatasDeJogos> getJogosDatas() {
+        return jogosDatas;
+    }
 
     public void setNomeCampeonato(String nomeCampeonato) {
         this.nomeCampeonato = nomeCampeonato;
@@ -60,6 +74,10 @@ public void addTimes(TimesModelo timesCadastrados){
 
     public void setTimes(List<TimesModelo> times) {
         this.times = times;
+    }
+
+    public void setJogosDatas(List<DatasDeJogos> jogosDatas) {
+        this.jogosDatas = jogosDatas;
     }
 }
 
